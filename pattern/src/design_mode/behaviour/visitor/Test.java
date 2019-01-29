@@ -13,10 +13,11 @@ public class Test {
         obj.attach(new Autumn());
         obj.attach(new Winter());
 
-        obj.accept(new Tree());
-        obj.accept(new Flower());
+        obj.accept(new TreeVisitor());
+        obj.accept(new FlowerVisitor());
         //现在要添加一种鸟，不需要改动四季，只需要添加一种鸟的Visitor
-        obj.accept(new Bird());
+        obj.accept(new BirdVisitor());
+        obj.accept(new LiBaiVisitor());
 
     }
 

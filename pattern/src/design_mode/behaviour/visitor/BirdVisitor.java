@@ -1,6 +1,6 @@
 package design_mode.behaviour.visitor;
 
-public class Bird implements SeasonVisitor {
+public class BirdVisitor implements SeasonVisitor {
 
     @Override
     public void visitSpring(Spring spring) {
