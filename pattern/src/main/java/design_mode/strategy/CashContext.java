@@ -1,10 +1,10 @@
 package design_mode.strategy;
 
-public class CashCalculatorFactory {
+public class CashContext {
 
+    CashCalculator calculator;
 
-    public static CashCalculator get(String priceStrategy) {
-        CashCalculator calculator;
+    public CashContext(String priceStrategy) {
         switch (priceStrategy) {
             case "打五折" :
                 calculator = new RebateCashCalculator(0.5);
@@ -15,6 +15,9 @@ public class CashCalculatorFactory {
             default:
                 calculator = new NormalCashCalculator();
         }
-        return calculator;
+    }
+
+    public Double getResult(Double originPrice) {
+        return calculator.calculate(originPrice);
     }
 }

@@ -4,14 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //简单工厂方法得到现金计算器接口
-
+        //通过把 锦囊 传递给 策略选择器，来选择策略执行
         String priceStrategy = "满300减100";
         Double originPrice = 500.0;
-        CashCalculator cashCalculator = CashCalculatorFactory.get(priceStrategy);
+        CashContext cashContext = new CashContext(priceStrategy);
+        Double price = cashContext.getResult(originPrice);
 
-        //通过计算器 计算 得到折扣价格
-        Double price = cashCalculator.calculate(originPrice);
         System.out.println(String.format("%s 经过 %s 计算后 价格为 %s", originPrice, priceStrategy, price));
     }
 
