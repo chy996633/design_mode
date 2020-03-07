@@ -11,8 +11,6 @@ public class StageGirl extends Observable implements Observer {
 
     private static final String WORK = "1";
     private static final String REST = "0";
-    ArrayList<Programmer> programmers;
-
 
     @Override
     public void update(Observable o, Object arg) {

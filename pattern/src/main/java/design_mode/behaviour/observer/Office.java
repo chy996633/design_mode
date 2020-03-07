@@ -17,8 +17,6 @@ public class Office {
         stageGirl.addObserver(p1);
         stageGirl.addObserver(p2);
         stageGirl.addObserver(p3);
-        stageGirl.hasChanged();
-
     }
 
     public void bossEnter(){
